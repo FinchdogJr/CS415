@@ -1,8 +1,4 @@
--- ===========================
--- CREATE TABLE STRUCTURE
--- ===========================
-
--- USERS
+-- 2. create all tables
 CREATE TABLE Users (
     user_id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(100) NOT NULL,
@@ -11,7 +7,6 @@ CREATE TABLE Users (
     INDEX(name)
 );
 
--- BOOKS
 CREATE TABLE Books (
     book_id INT AUTO_INCREMENT PRIMARY KEY,
     title VARCHAR(200) NOT NULL,
@@ -23,7 +18,6 @@ CREATE TABLE Books (
     INDEX(author)
 );
 
--- OWNERSHIP
 CREATE TABLE Ownership (
     ownership_id INT AUTO_INCREMENT PRIMARY KEY,
     user_id INT NOT NULL,
@@ -35,7 +29,6 @@ CREATE TABLE Ownership (
     INDEX(book_id)
 );
 
--- BORROWING
 CREATE TABLE Borrowing (
     borrow_id INT AUTO_INCREMENT PRIMARY KEY,
     book_id INT NOT NULL,
@@ -52,7 +45,6 @@ CREATE TABLE Borrowing (
     INDEX(owner_id)
 );
 
--- RATINGS
 CREATE TABLE Ratings (
     rating_id INT AUTO_INCREMENT PRIMARY KEY,
     user_id INT NOT NULL,
